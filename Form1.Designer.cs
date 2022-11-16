@@ -58,7 +58,7 @@
             this.comboboxNetworkAdapter.FormattingEnabled = true;
             this.comboboxNetworkAdapter.Location = new System.Drawing.Point(145, 29);
             this.comboboxNetworkAdapter.Name = "comboboxNetworkAdapter";
-            this.comboboxNetworkAdapter.Size = new System.Drawing.Size(425, 25);
+            this.comboboxNetworkAdapter.Size = new System.Drawing.Size(438, 25);
             this.comboboxNetworkAdapter.TabIndex = 0;
             // 
             // label2
