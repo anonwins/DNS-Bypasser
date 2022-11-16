@@ -16,9 +16,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace DNS_Bypasser
 {
-    public partial class Form1 : Form
+    public partial class DNS_Bypasser_Form : Form
     {
-        public Form1()
+        public DNS_Bypasser_Form()
         {
             InitializeComponent();
             populateAdapterCombobox();
