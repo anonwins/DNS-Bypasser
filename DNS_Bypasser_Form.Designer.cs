@@ -39,11 +39,11 @@
             this.textBoxIPv4b = new System.Windows.Forms.TextBox();
             this.textBoxIPv4a = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioProviderCustom = new System.Windows.Forms.RadioButton();
+            this.radioProvider4 = new System.Windows.Forms.RadioButton();
+            this.radioProvider3 = new System.Windows.Forms.RadioButton();
             this.radioProvider2 = new System.Windows.Forms.RadioButton();
             this.buttonApply = new System.Windows.Forms.Button();
-            this.radioProvider3 = new System.Windows.Forms.RadioButton();
-            this.radioProvider4 = new System.Windows.Forms.RadioButton();
-            this.radioProviderCustom = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panelAddresses.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,6 +162,42 @@
             this.panel2.Size = new System.Drawing.Size(552, 32);
             this.panel2.TabIndex = 8;
             // 
+            // radioProviderCustom
+            // 
+            this.radioProviderCustom.AutoSize = true;
+            this.radioProviderCustom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioProviderCustom.Location = new System.Drawing.Point(458, 9);
+            this.radioProviderCustom.Name = "radioProviderCustom";
+            this.radioProviderCustom.Size = new System.Drawing.Size(73, 21);
+            this.radioProviderCustom.TabIndex = 13;
+            this.radioProviderCustom.Text = "Custom:";
+            this.radioProviderCustom.UseVisualStyleBackColor = true;
+            this.radioProviderCustom.CheckedChanged += new System.EventHandler(this.radioProviderCustom_CheckedChanged);
+            // 
+            // radioProvider4
+            // 
+            this.radioProvider4.AutoSize = true;
+            this.radioProvider4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioProvider4.Location = new System.Drawing.Point(366, 9);
+            this.radioProvider4.Name = "radioProvider4";
+            this.radioProvider4.Size = new System.Drawing.Size(86, 21);
+            this.radioProvider4.TabIndex = 12;
+            this.radioProvider4.Text = "Cloudflare";
+            this.radioProvider4.UseVisualStyleBackColor = true;
+            this.radioProvider4.CheckedChanged += new System.EventHandler(this.radioProvider4_CheckedChanged);
+            // 
+            // radioProvider3
+            // 
+            this.radioProvider3.AutoSize = true;
+            this.radioProvider3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioProvider3.Location = new System.Drawing.Point(277, 9);
+            this.radioProvider3.Name = "radioProvider3";
+            this.radioProvider3.Size = new System.Drawing.Size(83, 21);
+            this.radioProvider3.TabIndex = 11;
+            this.radioProvider3.Text = "Control-D";
+            this.radioProvider3.UseVisualStyleBackColor = true;
+            this.radioProvider3.CheckedChanged += new System.EventHandler(this.radioProvider3_CheckedChanged);
+            // 
             // radioProvider2
             // 
             this.radioProvider2.AutoSize = true;
@@ -189,42 +225,6 @@
             this.buttonApply.UseVisualStyleBackColor = false;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
-            // radioProvider3
-            // 
-            this.radioProvider3.AutoSize = true;
-            this.radioProvider3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioProvider3.Location = new System.Drawing.Point(277, 9);
-            this.radioProvider3.Name = "radioProvider3";
-            this.radioProvider3.Size = new System.Drawing.Size(83, 21);
-            this.radioProvider3.TabIndex = 11;
-            this.radioProvider3.Text = "Control-D";
-            this.radioProvider3.UseVisualStyleBackColor = true;
-            this.radioProvider3.CheckedChanged += new System.EventHandler(this.radioProvider3_CheckedChanged);
-            // 
-            // radioProvider4
-            // 
-            this.radioProvider4.AutoSize = true;
-            this.radioProvider4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioProvider4.Location = new System.Drawing.Point(366, 9);
-            this.radioProvider4.Name = "radioProvider4";
-            this.radioProvider4.Size = new System.Drawing.Size(86, 21);
-            this.radioProvider4.TabIndex = 12;
-            this.radioProvider4.Text = "Cloudflare";
-            this.radioProvider4.UseVisualStyleBackColor = true;
-            this.radioProvider4.CheckedChanged += new System.EventHandler(this.radioProvider4_CheckedChanged);
-            // 
-            // radioProviderCustom
-            // 
-            this.radioProviderCustom.AutoSize = true;
-            this.radioProviderCustom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioProviderCustom.Location = new System.Drawing.Point(458, 9);
-            this.radioProviderCustom.Name = "radioProviderCustom";
-            this.radioProviderCustom.Size = new System.Drawing.Size(73, 21);
-            this.radioProviderCustom.TabIndex = 13;
-            this.radioProviderCustom.Text = "Custom:";
-            this.radioProviderCustom.UseVisualStyleBackColor = true;
-            this.radioProviderCustom.CheckedChanged += new System.EventHandler(this.radioProviderCustom_CheckedChanged);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -237,7 +237,7 @@
             this.linkLabel1.Text = "Github";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Form1
+            // DNS_Bypasser_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,9 +250,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboboxNetworkAdapter);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "DNS_Bypasser_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DNS Bypasser";
             this.panelAddresses.ResumeLayout(false);
