@@ -1,0 +1,5 @@
+write labels next to input fields (ipv4,ipv6)
+write ip address and/or other info below selected adaptor
+add ability to select multiple adaptors
+add custom dns server list text file next to exe. and dropdown selection
+notify user that the dns cache has been flushed
